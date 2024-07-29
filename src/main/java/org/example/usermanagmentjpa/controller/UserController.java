@@ -2,12 +2,11 @@ package org.example.usermanagmentjpa.controller;
 
 import org.example.usermanagmentjpa.exception.UserNotFoundException;
 import org.example.usermanagmentjpa.model.entity.UserEntity;
-import org.example.usermanagmentjpa.service.UserService;
 import org.example.usermanagmentjpa.service.UserServiceImpl;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.ResponseEntity;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 
 import java.util.HashMap;
 import java.util.List;
@@ -18,6 +17,7 @@ import java.util.Optional;
 @RequestMapping("/api/v1")
 public class UserController {
     private static final Logger log = LoggerFactory.getLogger(UserController.class);
+
     private final UserServiceImpl userService;
 
     public UserController(UserServiceImpl userService) {

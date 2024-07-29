@@ -2,11 +2,8 @@ package org.example.usermanagmentjpa.service;
 
 import org.example.usermanagmentjpa.exception.UserNotFoundException;
 import org.example.usermanagmentjpa.model.entity.UserEntity;
-import org.example.usermanagmentjpa.repository.UserRepository;
 
-import javax.swing.text.html.parser.Entity;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.Optional;
 import java.util.List;
 

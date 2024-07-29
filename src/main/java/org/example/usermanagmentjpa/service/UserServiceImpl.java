@@ -1,9 +1,8 @@
 package org.example.usermanagmentjpa.service;
 
 import org.example.usermanagmentjpa.exception.UserNotFoundException;
-import org.example.usermanagmentjpa.model.entity.UserEntity;
 import org.example.usermanagmentjpa.repository.UserRepository;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.example.usermanagmentjpa.model.entity.UserEntity;
 import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
@@ -14,11 +13,11 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
 
 
+    private UserRepository userRepository;
+
     public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
-
-    private UserRepository userRepository;
 
     @Override
     public UserEntity createUser(UserEntity user) {
